@@ -103,7 +103,7 @@ namespace ThirdApp
             min_y = search_min(lastFi, count);
             min_x = 0; max_x = count;
 
-            grFi.Clear(Color.Black);
+            grFi.Clear(Color.White);
             Draw_Markup(min_x, max_x, min_y, max_y, max_x, (max_y - min_y), 30, 15, true, false, pen_markup, grFi, pictureBox1);
             for (int i = 0; i < k; i++)
             {
@@ -115,7 +115,7 @@ namespace ThirdApp
             }
             Draw_Graph(lastFi, count, min_x, max_x, min_y, max_y, 30, 15, grFi, pictureBox1, pen);
 
-            grPsi.Clear(Color.Black);
+            grPsi.Clear(Color.White);
             if (k_dlg > 0 && k_dlg <= k)
             {
                 max_y = search_max(Psi, count);
@@ -133,16 +133,16 @@ namespace ThirdApp
         {
             InitializeComponent();
             grFi = pictureBox1.CreateGraphics();
-            grFi.Clear(Color.Black);
+            grFi.Clear(Color.White);
             grPsi = pictureBox2.CreateGraphics();
-            grPsi.Clear(Color.Black);
-            pen_markup = new Pen(Color.LightGray);
+            grPsi.Clear(Color.White);
+            pen_markup = new Pen(Color.Black);
             pen_markup.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            pen = new Pen(Color.Blue, 2);
-            pen_line = new Pen(Color.LightGray, 1);
+            pen = new Pen(Color.Black, 2);
+            pen_line = new Pen(Color.Black, 1);
             pen_line.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             m_font = new Font(FontFamily.GenericSansSerif, 10.0F, FontStyle.Regular);
-            m_brush_text = new SolidBrush(Color.White);
+            m_brush_text = new SolidBrush(Color.Black);
         }
 
         void InitValues()
@@ -341,7 +341,7 @@ namespace ThirdApp
             Font font;
             font = new Font(FontFamily.GenericSansSerif, 10.0F, FontStyle.Regular);
             SolidBrush brush_text;
-            brush_text = new SolidBrush(Color.White);
+            brush_text = new SolidBrush(Color.Black);
             Point p;
             for (double i = min_x; i <= max_x + x_interval / 10; i += x_interval)
             {
